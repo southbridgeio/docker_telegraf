@@ -1,0 +1,6 @@
+appdirs
+packaging
+pika
+pymongo
+pyparsing
+six
