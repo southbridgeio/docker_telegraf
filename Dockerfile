@@ -15,7 +15,8 @@ COPY requirements.txt /requirements.txt
 RUN  apk upgrade -U -a \
      && apk add --no-cache python openssl ca-certificates py-pip python-dev libjpeg-turbo musl zlib-dev libjpeg-turbo-dev\
      && apk add --no-cache --virtual build-dependencies wget make g++ gfortran \
-     && pip install --no-cache-dir --upgrade -r /requirements.txt \
+     && pip install --upgrade pip \
+     && pip install --no-cache-dir --upgrade -r /requirements.txt
 
 RUN set -ex && \
     apk add --no-cache --virtual .build-deps wget gnupg tar && \
