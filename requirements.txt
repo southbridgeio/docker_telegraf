@@ -4,3 +4,5 @@ pika
 pymongo
 pyparsing
 six
+grequests
+requests
